@@ -1,0 +1,78 @@
+# ---------------------------------------------------------------------------
+# Personal and client data: never in this repo.
+# The app keeps real case data outside the repo (OS app-data folder and
+# ~/.config/ceac-status/). These patterns catch copies that land here by
+# accident.
+# ---------------------------------------------------------------------------
+config.toml
+!.cargo/config.toml
+*.jsonl
+# databases and their journals
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.sqlcipher
+# result screenshots, saved CEAC pages, network recordings
+screenshots/
+captures/
+*.har
+# recovery keys and backups exported by the app
+*recovery-key*
+*.ceac-backup
+# browser-automation and MCP artifacts (can hold live page content)
+.playwright-mcp/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# ---------------------------------------------------------------------------
+# Secrets and signing material
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.p12
+*.pfx
+*.pem
+*.key
+*.cer
+*.mobileprovision
+*.provisionprofile
+
+# ---------------------------------------------------------------------------
+# Internal handoff, session and agent files
+# ---------------------------------------------------------------------------
+handoff.md
+HANDOFF.md
+CLAUDE.md
+session*.md
+SESSION*.md
+recovery-prompt.md
+pr-summary.md
+.claude/settings.local.json
+# .beads/ is tracked for its config (metadata.json, config.yaml); the board
+# database itself is ignored by .beads/.gitignore and syncs with bd dolt push.
+
+# ---------------------------------------------------------------------------
+# Build output, dependencies, tooling
+# ---------------------------------------------------------------------------
+node_modules/
+dist/
+dist-ssr/
+target/
+coverage/
+*.log
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+.beads-credential-key
+.beads/proxieddb/
+*.gate.lock*

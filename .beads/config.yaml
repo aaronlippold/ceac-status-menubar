@@ -1,0 +1,7 @@
+# Project-level beads config (tracked). Overrides the user default in
+# ~/.config/bd/config.yaml so this board is embedded on every machine.
+dolt:
+    mode: embedded
+    shared-server: false
+sync:
+    remote: "git+ssh://git@github.com/aaronlippold/ceac-status-menubar.git"

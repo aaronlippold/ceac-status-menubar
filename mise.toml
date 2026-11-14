@@ -1,0 +1,6 @@
+[tools]
+node = "24.22.3"
+# Rust is pinned in rust-toolchain.toml (read by rustup, cargo, CI and mise).
+
+[settings]
+idiomatic_version_file_enable_tools = ["rust"]

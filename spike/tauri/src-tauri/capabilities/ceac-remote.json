@@ -1,0 +1,10 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "ceac-remote",
+  "description": "Lets only the CEAC status page in the ceac window report progress and the case result",
+  "windows": ["ceac"],
+  "remote": {
+    "urls": ["https://ceac.state.gov/*"]
+  },
+  "permissions": ["allow-spike-report", "allow-case-result"]
+}
